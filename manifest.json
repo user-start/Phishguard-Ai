@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard AI",
+  "version": "1.0",
+  "permissions": ["activeTab","scripting"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [{
+    "matches": ["https://mail.google.com/*"],
+    "js": ["content.js"]
+  }]
+}
